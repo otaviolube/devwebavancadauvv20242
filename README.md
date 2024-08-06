@@ -7,8 +7,7 @@
 
 # Código do tsconfig.json
 
-``
-{
+```{
   "compilerOptions": {
     "target": "es2016",
     "module": "commonjs",
@@ -19,8 +18,7 @@
     "strict": true,
     "skipLibCheck": true
   }
-}
-`` 
+}``` 
 
 ## Scripts que estão sendo utilizados no package.json
 
