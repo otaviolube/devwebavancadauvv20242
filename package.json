@@ -1,0 +1,22 @@
+{
+  "name": "aula01",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx tsc",
+    "dev": "npx ts-node ./src/server.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "otaviolube",
+  "license": "GPL-3.0-or-later",
+  "description": "projeto desenvolvido em sala de aula",
+  "repository": {
+    "type": "git",
+    "url": "ainda não tem"
+  },
+  "dependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  }
+}
