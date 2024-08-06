@@ -4,6 +4,7 @@
 - npm i typescript
 - npx tsc --init
 - npm i ts-node
+- npx tsc
 
 # Código do tsconfig.json
 
@@ -26,4 +27,10 @@
 
 - "build": "npx tsc"
 - "dev": "npx ts-node ./src/server.ts"
+
+## Configurando um servidor web
+
+- npm install express
+- npm i --save-dev @types/express
+
 
