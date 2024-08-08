@@ -33,4 +33,7 @@
 - npm install express
 - npm i --save-dev @types/express
 
+## Projeto para usar múltiplas versões do NodeJS na mesma máquina
+
+- https://github.com/nvm-sh/nvm?tab=readme-ov-file#install--update-script
 
