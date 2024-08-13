@@ -37,3 +37,74 @@
 
 - https://github.com/nvm-sh/nvm?tab=readme-ov-file#install--update-script
 
+## Algumas extensões do VSCode recomendadas
+
+```
+{
+    "recommendations": [
+        "vscode-icons-team.vscode-icons",
+        "esbenp.prettier-vscode",
+        "prisma.prisma",
+        "Prisma.prisma-insider"
+    ]
+}
+```
+
+## Instalando o ts-node-dev
+
+O ts-node-dev nos ajuda a ter mais produtividade uma vez que ele reinicializar o servidor automaticamente a medida que salvamos o projeto.
+
+- npm i ts-node-dev --save-dev
+
+Depois de instalado, basta atualizar o script de execução do projeto para:
+
+```
+  "dev": "npx ts-node-dev ./src/server.ts"
+```
+
+## Configurando o Prisma ORM
+
+- https://www.prisma.io/docs/getting-started/quickstart
+
+Vamos configurar o Prisma ORM com o seguinte schema de dados
+
+```
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id       Int       @id @default(autoincrement())
+  email    String    @unique
+  name     String?
+  posts    Post[]
+  comments Comment[]
+}
+
+model Post {
+  id        Int       @id @default(autoincrement())
+  title     String
+  content   String?
+  published Boolean   @default(false)
+  author    User      @relation(fields: [authorId], references: [id])
+  authorId  Int
+  comments  Comment[]
+}
+
+model Comment {
+  id        Int     @id @default(autoincrement())
+  title     String
+  content   String
+  published Boolean @default(false)
+  author    User    @relation(fields: [authorId], references: [id])
+  authorId  Int
+  post      Post    @relation(fields: [postId], references: [id])
+  postId    Int
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+```
