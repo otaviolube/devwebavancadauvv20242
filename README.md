@@ -108,3 +108,15 @@ datasource db {
 }
 
 ```
+
+## Instalação da extensão do ThunderClient
+
+- Extension ID = rangav.vscode-thunder-client
+
+## Métodos do HTTP
+
+- https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Methods
+
+## Status Codes do HTTP
+
+- https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status#respostas_de_erro_do_servidor
