@@ -32,6 +32,13 @@ model Comment {
   postId    Int
 }
 
+model Session {
+  id           Int       @id @default(autoincrement())
+  token        String
+  createdAt    DateTime  @default(now())
+  expirationAt DateTime?
+}
+
 datasource db {
   provider = "sqlite"
   url      = "file:./dev.db"
